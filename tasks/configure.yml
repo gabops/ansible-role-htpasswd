@@ -9,4 +9,4 @@
     password: "{{ item.1.password | default(omit) }}"
     path: "{{ item.0.path }}"
   loop: "{{ htpasswd_files | subelements('users') }}"
-  no_log: true
+  no_log: "{{ htpasswd_suppress_output }}"

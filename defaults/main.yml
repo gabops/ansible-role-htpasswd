@@ -3,4 +3,6 @@ htpasswd_packages: ""
 
 htpasswd_enable_repo: ""
 
+htpasswd_suppress_output: true
+
 htpasswd_files: []

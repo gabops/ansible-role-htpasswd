@@ -12,7 +12,7 @@ def test_passwd_file(host):
     assert f.exists
     assert f.user == 'root'
     assert f.group == 'root'
-    assert f.contains == 'john.doe'
+    assert f.contains('john.doe')
 
 
 def test_another_passwd_file(host):
@@ -21,4 +21,4 @@ def test_another_passwd_file(host):
     assert f.exists
     assert f.user == 'root'
     assert f.group == 'root'
-    assert f.contains == 'devops'
+    assert f.contains('devops')

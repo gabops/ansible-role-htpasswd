@@ -1,0 +1,12 @@
+---
+- name: Configure htpasswd files
+  htpasswd:
+    crypt_scheme: "{{ item.1.crypt_scheme | default(omit) }}"
+    group: "{{ item.0.group | default(omit) }}"
+    mode: "{{ item.0.mode | default(omit) }}"
+    name: "{{ item.1.username }}"
+    owner: "{{ item.0.owner | default(omit) }}"
+    password: "{{ item.1.password | default(omit) }}"
+    path: "{{ item.0.path }}"
+  loop: "{{ htpasswd_files | subelements('users') }}"
+  no_log: true

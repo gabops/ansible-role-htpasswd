@@ -1,0 +1,14 @@
+---
+- name: Install passlib (RedHat)
+  yum:
+    name: "{{ htpasswd_packages }}"
+    state: present
+    enablerepo: "{{ htpasswd_enable_repo }}"
+  when: ansible_os_family == "RedHat"
+
+- name: Install passlib (Debian)
+  apt:
+    name: "{{ htpasswd_packages }}"
+    state: present
+    update_cache: true
+  when: ansible_os_family == "Debian"

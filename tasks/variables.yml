@@ -1,0 +1,8 @@
+---
+- name: Include os family specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Set htpasswd packages
+  set_fact:
+    htpasswd_packages: "{{ __htpasswd_packages }}"
+  when: htpasswd_packages | length == 0

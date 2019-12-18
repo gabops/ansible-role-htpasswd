@@ -7,7 +7,7 @@ Configures htpasswd files.
 Requirements
 ------------
 
-None.
+Depending on the os you are targeting (RedHat family) EPEL could be required. I suggest to use [gabops.repo_epel](https://galaxy.ansible.com/gabops/repo_epel)
 
 Role Variables
 --------------

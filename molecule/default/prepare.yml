@@ -3,6 +3,6 @@
   hosts: all
   tasks:
     - name: Install EPEL repository
-      import_role:
+      include_role:
         name: gabops.repo_epel
       when: ansible_os_family == "RedHat"

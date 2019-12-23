@@ -8,9 +8,9 @@ env:
     - TEST_DISTRO: centos:7
     - TEST_DISTRO: amazonlinux:1
     - TEST_DISTRO: amazonlinux:2
-    - TEST_DISTRO: debian:8
+    # - TEST_DISTRO: debian:8
     - TEST_DISTRO: debian:9
-    - TEST_DISTRO: ubuntu:16.04
+    # - TEST_DISTRO: ubuntu:16.04
     - TEST_DISTRO: ubuntu:18.04
 
 install:

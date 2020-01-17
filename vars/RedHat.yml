@@ -1,4 +1,4 @@
 ---
 __htpasswd_packages:
   - httpd-tools
-  - python-passlib
+  - python2-passlib

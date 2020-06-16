@@ -1,5 +1,5 @@
 ---
-htpasswd_packages: ""
+htpasswd_packages: []
 
 htpasswd_enable_repo: ""
 

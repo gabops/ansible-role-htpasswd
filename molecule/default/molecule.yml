@@ -8,10 +8,6 @@ lint:
 platforms:
   - name: instance
     image: ${TEST_DISTRO:-centos:7}
-    privileged: True
-    command: /sbin/init
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
 provisioner:
   name: ansible
   lint:
